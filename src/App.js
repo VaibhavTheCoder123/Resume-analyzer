@@ -29,7 +29,7 @@ function App() {
       </div>
 
       <div className="main">
-        <h1>Resume Intelligence</h1>
+       <h1 className="text-5xl text-green-500">WORKING</h1>
 
         <UploadBox onUpload={uploadResume} />
 
