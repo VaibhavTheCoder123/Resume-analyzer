@@ -6,14 +6,24 @@
 </head>
 <body>
 
-<div class="container">
+<div class="hero">
     <h1>🚀 AI Resume Analyzer</h1>
+    <p>Get instant job match insights & skill gaps</p>
+</div>
 
-    <div class="upload-box">
-        <input type="file" id="resume">
-        <button onclick="upload()">Analyze Resume</button>
+<div class="upload-container">
+    <div class="upload-card" onclick="triggerFile()">
+        <p>📂 Drag & Drop Resume</p>
+        <p>or Click to Upload</p>
+        <input type="file" id="resume" hidden>
     </div>
 
+    <button onclick="upload()">Analyze Resume</button>
+</div>
+
+<div id="loader" class="loader hidden"></div>
+
+<div class="dashboard">
     <div id="score"></div>
     <div id="skills"></div>
     <div id="jobs"></div>

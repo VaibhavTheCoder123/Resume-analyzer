@@ -1,10 +1,17 @@
+function triggerFile() {
+    document.getElementById("resume").click();
+}
+
 function upload() {
     const fileInput = document.getElementById("resume");
+    const loader = document.getElementById("loader");
 
     if (fileInput.files.length === 0) {
         alert("Please select a file!");
         return;
     }
+
+    loader.classList.remove("hidden");
 
     const formData = new FormData();
     formData.append("resume", fileInput.files[0]);
@@ -15,6 +22,7 @@ function upload() {
     })
     .then(res => res.json())
     .then(data => {
+        loader.classList.add("hidden");
         showScore(data.score);
         showSkills(data.skills);
         showJobs(data.jobs);
@@ -23,7 +31,7 @@ function upload() {
 
 function showScore(score) {
     document.getElementById("score").innerHTML =
-        `<h2>Overall Score: ${score}%</h2>`;
+        `<h2>🔥 Overall Score: ${score}%</h2>`;
 }
 
 function showSkills(skills) {
