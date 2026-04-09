@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Resume Analyzer</title>
+    <title>AI Resume Analyzer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>🚀 Resume Analyzer</h1>
+    <h1>🚀 AI Resume Analyzer</h1>
 
-    <input type="file" id="resume">
-    <button onclick="upload()">Analyze</button>
+    <div class="upload-box">
+        <input type="file" id="resume">
+        <button onclick="upload()">Analyze Resume</button>
+    </div>
 
+    <div id="score"></div>
     <div id="skills"></div>
     <div id="jobs"></div>
 </div>

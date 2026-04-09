@@ -2,7 +2,7 @@ function upload() {
     const fileInput = document.getElementById("resume");
 
     if (fileInput.files.length === 0) {
-        alert("Select a file first!");
+        alert("Please select a file!");
         return;
     }
 
@@ -15,25 +15,31 @@ function upload() {
     })
     .then(res => res.json())
     .then(data => {
+        showScore(data.score);
         showSkills(data.skills);
         showJobs(data.jobs);
     });
 }
 
+function showScore(score) {
+    document.getElementById("score").innerHTML =
+        `<h2>Overall Score: ${score}%</h2>`;
+}
+
 function showSkills(skills) {
-    const div = document.getElementById("skills");
-    div.innerHTML = "<h2>Skills</h2>" + skills.join(", ");
+    document.getElementById("skills").innerHTML =
+        `<h3>Skills:</h3> ${skills.join(", ")}`;
 }
 
 function showJobs(jobs) {
     const container = document.getElementById("jobs");
-    container.innerHTML = "<h2>Job Matches</h2>";
+    container.innerHTML = "";
 
     jobs.forEach(job => {
         container.innerHTML += `
             <div class="card">
                 <h3>${job.role}</h3>
-                <p>Match: ${job.match}%</p>
+                <p>${job.match}% Match</p>
 
                 <div class="progress">
                     <div class="progress-bar" style="width:${job.match}%"></div>
