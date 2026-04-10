@@ -1,4 +1,4 @@
-.counter {
+/* .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -160,7 +160,13 @@
     height: 48px;
   }
 }
+.card {
+  margin-bottom: 24px;
+}
 
+.card:hover {
+  border-color: red;
+}
 .ticks {
   position: relative;
   width: 100%;
@@ -181,4 +187,4 @@
     right: 0;
     border-right-color: var(--border);
   }
-}
+} */

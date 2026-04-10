@@ -1,14 +1,26 @@
 [
   {
-    "role": "Frontend Developer",
-    "skills": ["html", "css", "javascript", "react"]
+    "role": "Full Stack Engineer",
+    "skills": ["JavaScript", "React", "Node.js", "Database", "Git"]
   },
   {
-    "role": "Backend Developer",
-    "skills": ["python", "django", "sql"]
+    "role": "AI/ML Developer",
+    "skills": ["Python", "Machine Learning", "Data Science", "DSA", "Math"]
   },
   {
-    "role": "AI Engineer",
-    "skills": ["python", "machine learning", "data analysis"]
+    "role": "Cloud Architect",
+    "skills": ["Cloud", "DevOps", "Networking", "Operating Systems", "Linux"]
+  },
+  {
+    "role": "Embedded Systems Engineer",
+    "skills": ["Electronics", "IoT", "Java", "Operating Systems"]
+  },
+  {
+    "role": "Data Analyst",
+    "skills": ["Python", "Database", "Big Data", "Excel", "Statistics"]
+  },
+  {
+    "role": "Cybersecurity Specialist",
+    "skills": ["Cybersecurity", "Networking", "Operating Systems", "Version Control"]
   }
 ]
