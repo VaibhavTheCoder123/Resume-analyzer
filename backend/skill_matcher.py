@@ -33,3 +33,5 @@ def match_jobs(user_skills):
         })
 
     return sorted(results, key=lambda x: x["match"], reverse=True)
+
+print("Skill Matcher API is running...")
