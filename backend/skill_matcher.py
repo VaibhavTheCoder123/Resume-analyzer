@@ -35,3 +35,12 @@ def match_jobs(user_skills):
     return sorted(results, key=lambda x: x["match"], reverse=True)
 
 print("Skill Matcher API is running...")
+if __name__ == "__main__":    # Example usage
+    user_input = "I have experience with python, django, and machine learning."
+    skills = extract_skills(user_input)
+    print("Extracted Skills:", skills)
+
+    job_matches = match_jobs(skills)
+    print("Job Matches:", job_matches)
+
+    
