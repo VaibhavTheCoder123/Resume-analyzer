@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     job_matches = match_jobs(skills)
     print("Job Matches:", job_matches)
-    results = match_jobs(skills)
+    results = match_jobs(skills)     
     for result in results:
         print(f"Role: {result['role']}, Match: {result['match']}%, Missing Skills: {', '.join(result['missing'])}")
         if result['match'] >= 50:
@@ -55,9 +55,34 @@ if __name__ == "__main__":
 
     print("Suggestions for Improvement:", suggestions)
     additional_suggestions = set(suggestions) - set(skills)
-    print("Additional Suggestions for Improvement:", additional_suggestions)
-else: the result will be a list of job matches with their respective match percentages and missing skills. The suggestions for improvement will be a list of skills that the user is missing for roles where the match percentage is below 50%.
-results = match_jobs(skills)
-for result in results:    print(f"Role: {result['role']}, Match: {result['match']}%, Missing Skills: {', '.join(result['missing'])}")
+    print("Additional Suggestions for Improvement:", additional_suggestions)for result in results:    print(f"Role: {result['role']}, Match: {result['match']}%, Missing Skills: {', '.join(result['missing'])}")
     if result['match'] >= 50:
         print("You are a good fit for this role!")
+    else:        print("You may want to improve your skills for this role.")
+    additional_suggestions = set(suggestions) - set(skills)
+    print("Additional Suggestions for Improvement:", additional_suggestions)
+    Webdev_suggestions = [s for s in additional_suggestions if s in ["html", "css", "javascript", "react", "node"]]
+    print("Web Development Suggestions:", Webdev_suggestions)
+    Data_suggestions = [s for s in additional_suggestions if s in ["sql", "machine learning", "data analysis"]]
+    print("Data Science Suggestions:", Data_suggestions)
+    backend_suggestions = [s for s in additional_suggestions if s in ["python", "django", "flask"]]
+    print("Backend Development Suggestions:", backend_suggestions)
+    frontend_suggestions = [s for s in additional_suggestions if s in ["html", "css", "javascript", "react"]]
+    print("Frontend Development Suggestions:", frontend_suggestions)
+    cloud_suggestions = [s for s in additional_suggestions if s in ["aws", "azure", "gcp"]]
+    print("Cloud Computing Suggestions:", cloud_suggestions)
+    cyber_suggestions = [s for s in additional_suggestions if s in ["network security", "penetration testing"]]
+    print("Cybersecurity Suggestions:", cyber_suggestions)
+    bigdata_suggestions = [s for s in additional_suggestions if s in ["hadoop", "spark"]]
+    print("Big Data Suggestions:", bigdata_suggestions)
+    blockchain_suggestions = [s for s in additional_suggestions if s in ["solidity", "ethereum"]]
+    print("Blockchain Suggestions:", blockchain_suggestions)
+    devops_suggestions = [s for s in additional_suggestions if s in ["docker", "kubernetes"]]
+    print("DevOps Suggestions:", devops_suggestions)
+    devsecops_suggestions = [s for s in additional_suggestions if s in ["security automation", "compliance"]]
+    print("DevSecOps Suggestions:", devsecops_suggestions)
+    ai_suggestions = [s for s in additional_suggestions if s in ["deep learning", "natural language processing"]]
+    print("AI Suggestions:", ai_suggestions)
+    dev_suggestions = [s for s in additional_suggestions if s in ["git", "ci/cd"]]
+    print("General Development Suggestions:", dev_suggestions)
+    print("Overall Suggestions for Improvement:", additional_suggestions)
