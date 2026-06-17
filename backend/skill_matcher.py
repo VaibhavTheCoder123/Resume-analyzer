@@ -54,9 +54,10 @@ if __name__ == "__main__":
             suggestions.extend(result['missing'])
 
     print("Suggestions for Improvement:", suggestions)
-    ekse the result will be a list of job matches with their respective match percentages and missing skills. The suggestions for improvement will be a list of skills that the user is missing for roles where the match percentage is below 50%.
+    additional_suggestions = set(suggestions) - set(skills)
+    print("Additional Suggestions for Improvement:", additional_suggestions)
+else: the result will be a list of job matches with their respective match percentages and missing skills. The suggestions for improvement will be a list of skills that the user is missing for roles where the match percentage is below 50%.
 results = match_jobs(skills)
 for result in results:    print(f"Role: {result['role']}, Match: {result['match']}%, Missing Skills: {', '.join(result['missing'])}")
     if result['match'] >= 50:
         print("You are a good fit for this role!")
-        
