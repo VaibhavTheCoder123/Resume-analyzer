@@ -17,7 +17,7 @@ def extract_skills(text):
 def match_jobs(user_skills):
     with open("backend/job_data.json") as f:
         jobs = json.load(f)
-
+processed_skills = [skill.lower() for skill in user_skills]
     results = []
 
     for job in jobs:
