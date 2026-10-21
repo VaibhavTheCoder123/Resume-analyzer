@@ -8,12 +8,3 @@ Terminal 2:
 
 cd "D:\Resume analyser project\ai-resume-analyzer"
 npm run dev
-
-
-
-
-
-
-
-
-HFVJYCNGJ
