@@ -8,3 +8,6 @@ Terminal 2:
 
 cd "D:\Resume analyser project\ai-resume-analyzer"
 npm run dev
+
+
+if some data is not working kindly contact this email: 
